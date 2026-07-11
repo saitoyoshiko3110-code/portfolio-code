@@ -1,0 +1,946 @@
+/*========= 流れるテキスト ===============*/
+
+.slide-in {
+    overflow: hidden;
+      display: inline-block;
+  }
+  
+  
+  .slide-in_inner {
+    display: inline-block;
+  }
+
+/*左右のアニメーション*/
+.leftAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+  animation-name:slideTextX100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+  transform: translateX(-100%); /*要素を左の枠外に移動*/
+        opacity: 0;
+  }
+
+  to {
+  transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+  animation-name:slideTextX-100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX-100 {
+    from {
+    transform: translateX(100%);/*要素を右の枠外に移動*/
+    opacity: 0;
+}
+
+    to {
+    transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+    }
+}
+
+/*左右のアニメーション*/
+.rightAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+  animation-name:slideTextX100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+  transform: translateX(-100%); /*要素を左の枠外に移動*/
+        opacity: 0;
+  }
+
+  to {
+  transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+  animation-name:slideTextX-100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+  from {
+  transform: translateX(100%);/*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+  transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.fadeUpTrigger {
+    opacity: 0;
+}
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/*フェードイン
+-----------------------------------------------------------*/
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+ 
+.fadeUpTrigger{
+    opacity: 0;
+}
+
+/* 下から */
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+@keyframes fadeUpAnime{
+    from {
+    opacity: 0;
+    transform: translateY(100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+/* 右から */
+
+.fadeRight{
+    animation-name:fadeRightAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+@keyframes fadeRightAnime{
+    from {
+    opacity: 0;
+    transform: translateX(100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+
+
+
+/*========= 流れるテキスト ここまで===============*/
+
+
+.marker__yellow{
+  background: linear-gradient(transparent 60%, var(--primary-yellow-color) 0);
+}
+
+.three-columns-items{
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.three-columns-items .item{
+  width: calc(33.3333% - 4rem/3);
+  margin: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  
+  .three-columns-items .item{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* ホバーで画像拡大 */
+.three-columns-items .item a {
+    display: block;
+    overflow: hidden;
+}
+.three-columns-items .item img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+.three-columns-items .item a:hover img {
+    transform: scale(1.1);
+}
+
+/* モーダルのスタイル（初期状態は非表示） */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-open {
+    display: flex;
+}
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+}
+.close {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: white; font-size: var(--fs-xxxl); cursor: pointer;
+}
+
+/* 最初は非表示にする */
+.modal {
+    display: none;
+}
+/* クラスがついた時だけ表示 */
+.modal.is-open {
+    display: flex;
+}
+
+/* モーダル全体のスタイル（今まで通りです） */
+.modal.modal {
+    display: none; /* 初期状態は非表示 */
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85); /* 背景を少し濃く */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 表示された時のクラス */
+.modal.modal.is-open {
+    display: flex !important;
+}
+
+/* モーダルの中身（ここを基準点にします） */
+.modal .modal-content {
+    position: relative; /* これが超重要：ここを基準点にする */
+    width: 90%; 
+    max-width: 1000px; /* 最大幅を少し広げました */
+    max-height: 90vh;
+    background: #fff;
+    padding: 50px; /* 内側の余白を確保 */
+    border-radius: 8px;
+    overflow-y: auto; /* 中身が長い場合はスクロール */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 992px) {
+  
+  .modal .modal-content {
+    padding: 20px; 
+  }
+}
+
+/* 閉じるボタンの修正（ここを右上に配置します） */
+.modal .close {
+    position: absolute; /* モーダル内を自由に動く */
+    top: 15px; 
+    right: 20px;
+    color: #333; /* 見やすい色に */
+    font-size: var(--fs-xxxl); /* 大きく */
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10000; /* 最前面に */
+}
+
+/* ホバーした時の色 */
+.modal .close:hover {
+    color: #000;
+}
+
+/* モーダル内の要素の調整 */
+.modal .modal-body {
+    display: flex;
+    column-gap: 2%;
+}
+
+.modal .modal-text {
+    margin-bottom: 30px;
+    width: 33%;
+}
+
+.modal .modal-text h2{
+    margin-bottom: 1.5rem;
+    font-size: var(--fs-xl);
+    font-weight: 600;
+}
+
+.modal .modal-text p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    font-size: var(--fs-sm);
+}
+
+.modal .modal-slider{
+    width: 65%;
+}
+
+
+@media only screen and (max-width: 992px) {
+  /* モーダル内の要素の調整 */
+.modal .modal-body {
+    flex-wrap: wrap;
+}
+
+.modal .modal-text {
+    width: 100%;
+}
+
+.modal .modal-slider{
+    width: 100%;
+}
+  
+}
+
+/* 1. メインスライダーの枠を完全に消す */
+.slider-for {
+    border: none ;
+    padding: 0;
+    background: transparent ;
+}
+
+/* メイン画像も枠なし */
+.slider-for .slick-slide img {
+    border: none ;
+    box-shadow: none ;
+    max-width: 100%;
+}
+
+/* 2. サムネイル（slider-nav）の枠線とレイアウトを整理 */
+.slider-nav {
+    /*border: 1px solid #ccc;  サムネイル全体の外枠 */
+    padding: 5px;           /* サムネイルを囲む余裕 */
+    background: #fff;
+    box-sizing: border-box;
+}
+
+/* 個々のサムネイル画像に線を引く */
+.slider-nav .slick-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc !important; /* 個別の枠線 */
+    box-sizing: border-box;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+
+/* 3. 選択中のサムネイルに青枠を強調 */
+.slider-nav .slick-slide.slick-current img {
+    opacity: 1 !important;
+    border: 2px solid #007bff !important;
+}
+
+/* 4. スライダーのコンテナ幅を整理 */
+.modal-slider {
+    width: 65%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+#photo-slider,
+#photo-thumbnail_slider{
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+#photo-thumbnail_slider{
+    margin: 0 auto;
+}
+.slide-item img{
+    width: 100%;
+}  
+  .thumbnail-item img{
+    width: 98%;
+    margin: 0 auto;
+}
+
+#photo-slider .slick-next{
+    right:5px;
+}
+
+#photo-slider .slick-prev{
+    left:5px;
+}
+
+
+#photo-thumbnail_slider .slick-prev,
+#photo-thumbnail_slider .slick-next{
+    background-color: #fff;
+    opacity: .8;
+    width: 20px;
+    height: 100%;
+    background-image: none;
+    background-position: center;
+    z-index:1;
+    border-radius:0;
+    -webkit-border-radius: 0;
+    top: 0;
+    margin-top: 0;
+}
+
+#photo-thumbnail_slider .slick-prev{
+    left: 0px;
+}
+
+#photo-thumbnail_slider .slick-next{
+    right: 0px;
+}
+
+#photo-thumbnail_slider .slick-prev::before{
+    content: "";
+    display:block;
+    width: 8px;
+    height: 16px;
+    margin-top: -8px;
+    background-image: url(../img/btn-prev.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 30%;
+}
+
+#photo-thumbnail_slider .slick-next::before{
+    content: "";
+    display:block;
+    width: 8px;
+    height: 16px;
+    margin-top: -8px;
+    background-image: url(../img/btn-next.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 200;
+    left: 25%;
+}
+
+@media only screen and (max-width: 992px)  {
+    #photo-slider, 
+    #photo-thumbnail_slider{
+        margin: 0 auto 20px;
+    }
+}
+
+
+
+.disc-list{
+    margin-left: 15px;
+}
+
+.disc-list li{
+    list-style-type: none;
+    font-size: var(--fs-md);
+    line-height: 2;
+}
+
+.disc-list li:before{
+    content: '';
+	width: 2px;
+	height: 2px;
+	display: inline-block;
+	border-radius: 100%;
+	background: #000;
+	position: relative;
+	left: -8px;
+	top: -3px;
+}
+
+@media only screen and (max-width: 992px)  {
+
+    .disc-list li{
+        font-size: var(--fs-sm);
+        line-height: 1.6;
+    }
+}
+
+/*smf contact*/
+
+
+.input {
+    border: 1px solid #aba9a9;
+    /* font-weight: 500; */
+    padding: 5px;
+    font-size: var(--fs-md);
+    padding: 0.5em 0.5em 0.5em 0.7em;
+}
+
+.input_text01 {
+    width: 500px;
+    max-width: 100%;
+}
+
+.input_text02 {
+    width: 180px;
+}
+
+.input_text04 {
+    width: 500px;
+    max-width: 100%;
+}
+
+.btn-auto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100px;
+    background: #d5d5d5;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 0.6em 0.5em 0.7em 0.5em;
+    padding: 0.8em 0.5em 1em 0.5em;
+}
+
+.select, .textarea {
+    border: 1px solid #aba9a9;
+    padding: 0.5em 0.5em 0.5em 0.7em;
+    font-size: var(--fs-md);
+}
+
+.textarea {
+    width: 700px;
+    height: 180px;
+    max-width: 100%;
+    width: 90%;
+}
+
+.contact-address-list {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 1000px){
+    .contact-address-list_column2 {
+        width: calc(100% - 137px);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .textarea {
+        width: 100%;
+        height: 180px;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .input_text01 {
+        width: 100%;
+    }
+    .btn-auto {
+        margin-top: 10px;
+        margin-left: 0;
+    }  
+    .smf-item__label__text > span {
+        font-size: var(--fs-xs);
+    }
+}
+
+
+.smf-form--simple-table{
+    margin-bottom: 30px;
+}
+
+.smf-action .smf-button-control__control {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 50px;
+    border: 1px solid #5b5b5b;
+    background-color: #fff;
+    padding: 12px;
+    /*border-radius: 50px;*/
+    font-size: var(--fs-lg);
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+.smf-action .smf-button-control__control {
+    width: 150px;
+}
+}
+
+
+
+/*@media screen and (min-width: 640px){*/
+    @media screen and (min-width: 1000px){
+.smf-form--simple-table .smf-item__col--label {
+    flex: 0 0 210px;
+    max-width: 210px;
+    padding-bottom: 0;
+    padding-right: var(--_padding1);
+}
+}
+
+.wp-block-columns {
+    align-items: normal!important;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap!important;
+}
+
+
+/*@media (max-width: 781px){*/
+@media (max-width: 1000px){
+    .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: 100%!important;
+    }
+}
+    
+.wp-block-column.is-vertically-aligned-center {
+    align-self: center;
+}
+
+
+[data-name="checkboxes-1hh1ci2ua"]{
+    margin-top: 50px;
+}
+
+/*@media screen and (min-width: 640px){*/
+@media screen and (min-width: 1000px){
+.smf-form--simple-table .smf-item__col--controls {
+    flex: 1 1 calc(100% - 288px);
+    max-width: calc(100% - 288px);
+    
+}
+}
+
+
+
+.sme-text-color.has-vivid-red-color{
+    color:#ff0000;
+    font-size: var(--fs-xs);
+}
+
+a.privacy-link {
+    text-decoration: underline;
+}
+
+.txt-alert{
+    color:#ff0000;
+    font-size: var(--fs-sm);
+}
+
+.smf-form--simple-table .contact-list01 {
+    border-bottom: 1px solid #c4c4c4;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 0;
+}
+
+
+.smf-checkboxes-control__control{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.smf-radio-buttons-control__control{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.smf-radio-buttons-control__control .smf-label{
+    margin-left: 50px;
+}
+
+.smf-radio-buttons-control__control .smf-label:first-of-type{
+    margin-left: 0;
+}
+
+@media screen and (max-width: 960px){
+
+    .smf-checkboxes-control__control,
+    .smf-radio-buttons-control__control{
+        display: block;
+    }
+
+    .smf-checkboxes-control__control .smf-label,
+    .smf-radio-buttons-control__control .smf-label{
+        margin:5px 0;
+    }
+    
+    
+
+}
+
+@media only screen and (max-width: 992px) {
+.smf-form--simple-table .contact-list01 {
+    display: block;
+}
+}
+
+.smf-action {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.smf-action .smf-button-control:nth-child(2n) {
+    margin-left:10px;
+}
+
+
+.smf-form .smf-item .smf-select-control__control.selectw180 {
+    width: 300px;
+}
+
+@media only screen and (max-width: 992px)  {
+    .smf-form .smf-item .smf-select-control__control.selectw180, 
+    .smf-form .smf-item .smf-select-control {
+        width: 100%;
+    }
+}
+
+@supports ((-webkit-appearance:none) or (appearance:none)) or (-moz-appearance:none) {
+    .smf-form .smf-item .smf-select-control {
+        position: relative;
+    }
+}
+
+@supports ((-webkit-appearance:none) or (appearance:none)) or (-moz-appearance:none) {
+    .smf-form .smf-item .smf-select-control__toggle {
+        /*background-color: var(--_color-white);
+        bottom: 0;*/
+        display: block;
+        /*left: 0;*/
+        position: absolute;
+        /*right: 0;*/
+        top: 45%;
+        z-index: 10;
+    }
+}
+
+@supports ((-webkit-appearance:none) or (appearance:none)) or (-moz-appearance:none) {
+    .smf-form .smf-item .smf-select-control__toggle:before {
+        border-color: currentcolor;
+        border-style: solid;
+        border-width: 0 1px 1px 0;
+        content: "";
+        display: block;
+        height: 6px;
+        position: absolute;
+       left: 280px;
+        top: calc(50% - 4px);
+        transform: rotate(45deg);
+        width: 6px;
+    }
+}
+
+.required{
+    color: #c0362f;
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 992px)  {
+
+    .contact-address-list_column1{
+        font-size: var(--fs-xs);
+        width: 60px;
+    }
+    
+    .required{
+        font-size: var(--fs-xs);
+        margin-left: 10px;
+        width: 40px;
+    }
+}
+
+.button-contact-submit{
+    font-size: var(--fs-xl);
+    color: #fff;
+    font-weight: 500;
+    width:250px;
+    height: auto;
+    padding: 10px;
+    background: #ea5413;
+    text-align: center;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
+
+.button_address{
+    font-size: var(--fs-md);
+    padding: 6px 10px;
+    background: #e0e0e0;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.button_address:hover{
+    opacity: .7;
+}
+
+@media only screen and (max-width: 992px)  {
+    .button_address{
+        font-size: var(--fs-xs);
+        padding: 12px 5px;
+    }
+
+}
+
+/*smf contact ここまで*/
+
+
+/*共通　flexboxタグ
+-----------------------------------------------------------*/
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexb{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flexc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 992px)  {
+    .blocksp{
+        display: block;
+    }
+    .flex-dir_column_reverse-sp{
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+
+/*背景
+-----------------------------------------------------------*/
+.bk-gray{
+    /*background-color: #f6f8fb;*/
+    background-image: url(../img/bk-gray-img.jpg);
+}
+
+.bk-yelllow{
+    background-image: url(../img/bk-yellow-img.jpg);
+}
+
+.line-dashed{
+    border-bottom: 1px dashed #000;
+}
+
+.line-dashed-top{
+    border-top: 1px dashed #000;
+}
+
+
+
+.arrow-black-right::after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    background-image: url(../img/icon_arrow-black-right.png);
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
+.arrow-black-left::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    background-image: url(../img/icon_arrow-black-right.png);
+    background-size: contain;
+    /*vertical-align: middle;*/
+    margin-right: 7px;
+}
+
+.arrow-white-left::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-image: url(../img/icon_arrow-white-right.png);
+    background-size: contain;
+    margin-right: 7px;
+}
+
+.button__simple-square{
+    background: transparent;
+    border: 1px solid rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-size: var(--fs-sm);
+    width: 300px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 992px)  {
+
+    .button__simple-square{
+        width: 230px;
+        height: 35px;
+    }
+
+}
+

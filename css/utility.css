@@ -1,0 +1,683 @@
+/*text  utility
+-----------------------------------------------------------*/
+
+.bold{
+	font-weight: bold;
+}
+
+.txtcenter{
+	text-align: center;
+}
+.txtleft{
+    text-align: left;
+}
+
+.txtright{
+	text-align: right;
+}
+
+.txtjustify{
+	text-align: justify;
+}
+
+.txtbold{
+  font-weight: 600;
+}
+
+.txtOrange{
+    color: #ea5413;
+}
+
+.txtBlue{
+    color: #0864b2;
+}
+
+
+
+
+
+.title-mincho{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 3.0rem;
+}
+
+@media only screen and (max-width: 992px)  {
+    .title-mincho{
+        font-size: 2.4rem;
+    }
+    .txtleftsp{
+        text-align: left;
+    }
+}
+
+.blue-subtitle{
+    font-size: 1.4rem;
+    color: #0864b2;
+}
+
+@media only screen and (max-width: 992px)  {
+    .blue-subtitle{
+        font-size: 1.2rem;
+    }
+}
+
+/*font
+-----------------------------------------------------------*/
+
+.fz12{
+	font-size: 1.2rem;
+}
+
+.fz14{
+	font-size: 1.4rem;
+}
+
+.fz16{
+	font-size: 1.6rem;
+}
+
+.fz18{
+	font-size: 1.8rem;
+}
+
+.fz20{
+	font-size: 2.0rem;
+}
+
+.fz22{
+	font-size: 2.2rem;
+}
+
+.fz24{
+	font-size: 2.4rem;
+}
+
+.fz26{
+	font-size: 2.6rem;
+}
+.fz28{
+	font-size: 2.8rem;
+}
+
+.fz30{
+	font-size: 3.0rem;
+}
+
+.fz35{
+	font-size: 3.5rem;
+}
+
+.fz36{
+	font-size: 3.6rem;
+}
+
+.fz40{
+	font-size: 4.0rem;
+}
+
+.fz50{
+	font-size: 5.0rem;
+}
+
+.fw700{
+    font-weight: 700;
+}
+
+.fw400{
+    font-weight: 400;
+}
+
+.fw500{
+    font-weight: 500;
+}
+.fw600{
+    font-weight: 600;
+}
+.fw700{
+    font-weight: 700;
+}
+
+
+.lsplus10{
+	letter-spacing: 1px;
+}
+
+.lsminus05{
+	letter-spacing: -.5px;
+}
+
+.lsminus10{
+	letter-spacing: -1px;
+}
+
+.lsminus15{
+	letter-spacing: -1.5px;
+}
+
+.lsminus18{
+	letter-spacing: -1.8px;
+}
+
+.lsminus20{
+	letter-spacing: -2px;
+}
+
+.lsplus15{
+	letter-spacing: 1.5px;
+}
+
+.lh10{
+	line-height: 1.0;
+}
+
+.lh12{
+	line-height: 1.2;
+}
+
+.lh14{
+	line-height: 1.4;
+}
+
+.lh18{
+	line-height: 1.8;
+}
+
+.lh20{
+	line-height: 2.0;
+}
+.lh25{
+	line-height: 2.5;
+}
+.lh30{
+	line-height: 3.0;
+}
+
+@media only screen and (max-width: 992px)  {
+
+    .fz10sp{
+        font-size: 1.0rem;
+    }
+    .fz12sp{
+		font-size: 1.2rem;
+	}
+	.fz14sp{
+		font-size: 1.4rem;
+	}
+	.fz15sp{
+		font-size: 1.5rem;
+	}
+	.fz16sp{
+		font-size: 1.6rem;
+	}
+	.fz18sp{
+		font-size: 1.8rem;
+	}
+    .fz20sp{
+        font-size: 2.0rem;
+    }
+	.fz22sp{
+		font-size: 2.2rem;
+	}
+	.fz24sp{
+		font-size: 2.4rem;
+	}
+	.fz28sp{
+		font-size: 2.8rem;
+	}
+	.fz30sp{
+		font-size: 3.0rem;
+	}
+	.lh14sp{
+		line-height: 1.4;
+	}
+	.lh16sp{
+		line-height: 1.6;
+	}
+    .lsminus20sp{
+		letter-spacing: -2.0px;
+	}
+	.lsminus15sp{
+		letter-spacing: -1.5px;
+	}
+	.lsminus10sp{
+		letter-spacing: -1px;
+	}
+
+}
+
+
+/*mt mb 調整タグ
+-----------------------------------------------------------*/
+
+.mt10{
+    margin-top:10px;
+}
+.mt15{
+    margin-top:15px;
+}
+.mt20{
+    margin-top:20px;
+}
+.mt30{
+    margin-top:30px;
+}
+.mt40{
+    margin-top:40px;
+}
+.mt50{
+    margin-top:50px;
+}
+.mt60{
+    margin-top:60px;
+}
+.mt80{
+    margin-top:80px;
+}
+.mt100{
+    margin-top:100px;
+}
+.mb5{
+    margin-bottom:5px;
+}
+.mb10{
+    margin-bottom:10px;
+}
+.mb15{
+    margin-bottom:15px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+.mb40{
+    margin-bottom: 40px;
+}
+.mb50{
+    margin-bottom:50px;
+}
+.mb60{
+    margin-bottom:60px;
+}
+.mb70{
+    margin-bottom: 70px;
+}
+.mb80{
+    margin-bottom: 80px;
+}
+.mb100{
+    margin-bottom: 100px;
+}
+.mb120{
+    margin-bottom: 120px;
+}
+.mb130{
+    margin-bottom: 130px;
+}
+.mb160{
+    margin-bottom: 160px;
+}
+.mb200{
+    margin-bottom: 200px;
+}
+
+
+.ml0{
+    margin-left:0;
+}
+.ml10{
+    margin-left: 10px;
+}
+.ml20{
+    margin-left: 20px;
+}
+.ml30{
+	margin-left: 30px;
+}
+.ml40{
+	margin-left: 40px;
+}
+.ml50{
+    margin-left: 50px;
+}
+
+.mr10{
+    margin-right: 10px;
+}
+.mr20{
+    margin-right: 20px;
+}
+.mr30{
+    margin-right: 30px;
+}
+.pt25{
+    padding-top: 25px;
+}
+.pt40{
+    padding-top: 40px;
+}
+.pt50{
+    padding-top: 50px;
+}
+.pt60{
+    padding-top: 60px;
+}
+.pt70{
+    padding-top: 70px;
+}
+.pt80{
+    padding-top: 80px;
+}
+.pt100{
+    padding-top: 100px;
+}
+
+.pt150{
+    padding-top: 150px;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+.wrapppb20{
+    padding-bottom: 20px;
+}
+.pb20{
+    padding-bottom: 20px;
+}
+.pb25{
+    padding-bottom: 25px;
+}
+.pb30{
+    padding-bottom: 30px;
+}
+.pb40{
+    padding-bottom: 40px;
+}
+.pb50{
+    padding-bottom: 50px;
+}
+.pb60{
+    padding-bottom: 60px;
+}
+.pb80{
+    padding-bottom: 80px;
+}
+.pb90{
+    padding-bottom: 90px;
+}
+.pb100{
+    padding-bottom: 100px;
+}
+.pb120{
+    padding-bottom: 120px;
+}
+.pb130{
+    padding-bottom: 130px;
+}
+.pb150{
+    padding-bottom: 150px;
+}
+
+.pl5{
+    padding-left: 5px;
+}
+
+.pl10{
+    padding-left: 10px;
+}
+
+.pl30{
+    padding-left: 30px;
+}
+
+.pl20{
+    padding-left: 20px;
+}
+.pl50{
+    padding-left:50px;
+}
+.pl60{
+    padding-left:60px;
+}
+.pl70{
+    padding-left:70px;
+}
+.pl25{
+    padding-left: 25px;
+}
+
+.pl110{
+    padding-left: 110px;
+}
+
+.pr30{
+    padding-right: 30px;
+}
+.pr70{
+    padding-right: 70px;
+}
+
+
+@media only screen and (max-width: 992px)  {
+
+    /*margin*/
+    .mt15{
+        margin-top:10px;
+    }
+    .mt30{
+        margin-top:15px;
+    }
+    .mt40{
+        margin-top:20px;
+    }
+    .mt50{
+        margin-top:25px;
+    }
+    .mt60{
+        margin-top:30px;
+    }
+    .mt80{
+        margin-top:40px;
+    }
+    .mt100{
+        margin-top:50px;
+    }
+    .mb10{
+        margin-bottom:5px;
+    }
+    .mb15{
+        margin-bottom:10px;
+    }
+    .mb20{
+        margin-bottom: 10px;
+    }
+    .mb30{
+        margin-bottom: 15px;
+    }
+    .mb40{
+        margin-bottom: 20px;
+    }
+    .mb50{
+        margin-bottom:25px;
+    }
+    .mb60{
+        margin-bottom:30px;
+    }
+    .mb70{
+        margin-bottom: 35px;
+    }
+    .mb80{
+        margin-bottom: 40px;
+    }
+    .mb100{
+        margin-bottom: 50px;
+    }
+    .mb120{
+        margin-bottom: 60px;
+    }
+    .mb130{
+        margin-bottom: 65px;
+    }
+    .mb160{
+        margin-bottom: 80px;
+    }
+    
+    /*sp調整タグ*/
+    .mb05sp{
+        margin-bottom: 5px;
+    }
+    .mb10sp{
+        margin-bottom: 10px;
+    }
+    .mb25sp{
+        margin-bottom: 25px;
+    }
+    .mb50sp{
+        margin-bottom: 50px;
+    }
+    .mt30sp{
+        margin-top: 30px;
+    }
+    .mt60sp{
+        margin-top: 60px;
+    }
+    .minwidth90{
+        min-width: 90px;
+    }
+
+    /*padding*/
+    
+    .pt25{
+        padding-top: 15px;
+    }
+    .pt40{
+        padding-top: 20px;
+    }
+    .pt50{
+        padding-top: 25px;
+    }
+    .pt60{
+        padding-top: 30px;
+    }
+    .pt70{
+        padding-top: 35px;
+    }
+    .pt80{
+        padding-top: 40px;
+    }
+    .pt100{
+        padding-top: 50px;
+    }
+    .pt150{
+        padding-top: 75px;
+    }
+    .pb20{
+        padding-bottom: 10px;
+    }
+    .pb25{
+        padding-bottom: 13px;
+    }
+    .pb30{
+        padding-bottom: 15px;
+    }
+    .pb40{
+        padding-bottom: 20px;
+    }
+    .pb50{
+        padding-bottom: 25px;
+    }
+    .pb60{
+        padding-bottom: 30px;
+    }
+    .pb80{
+        padding-bottom: 40px;
+    }
+    .pb90{
+        padding-bottom: 45px;
+    }
+    .pb100{
+        padding-bottom: 50px;
+    }
+    .pb120{
+        padding-bottom: 60px;
+    }
+    .pb130{
+        padding-bottom: 75px;
+    }
+
+    .pb150{
+        padding-bottom: 75px;
+    }
+
+    /*sp調整タグ*/
+
+    .pt25sp{
+        padding-top: 25px;
+    }
+    .pb25sp{
+        padding-bottom: 25px;
+    }
+    .pl30{
+        padding-left: 15px;
+    }
+    .pr30{
+        padding-right: 15px;
+    }
+    .pl20sp{
+        padding-left: 20px;
+    }
+    
+    /*marigin-left sp調整*/
+    .ml0sp{
+        margin-left:0;
+    }
+    .pl0sp{
+        padding-left: 0;
+    }
+
+    /*width sp100%*/
+    .w100sp{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+*pconly sponly切り替え　スマホtel処理
+-----------------------------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+	.w1024only{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+    .w1024only{
+        display: block;
+        position:relative;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 993px) {
+	.sponly{
+		display: none;
+	}
+}
+
+
+@media only screen and (max-width: 992px)  {
+    .pconly{
+        display: none;
+    }
+    .sponly{
+        display: block;
+        position:relative;
+    }
+    
+
+}
+
+

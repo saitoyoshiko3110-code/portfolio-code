@@ -1,0 +1,157 @@
+@charset 'UTF-8';
+/* Slider */
+
+/* Icons */
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: no-repeat center center;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    background-size: 20px auto;
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+.slick-prev:hover,
+.slick-next:hover{
+    /*background-color: #0068b6;    */
+}
+.slick-prev:before,
+.slick-next:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 50px;
+  height: 34px;
+  margin-top: -17px;
+  margin-left: 0;
+  /*border-radius: 50% 50% 50% 50%;*/
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+.slick-prev	{
+    background-image: url(../img/btn-prev.png);  
+    left: -10px;
+    background-position: left 50%;
+	z-index: 100;
+}
+.slick-next	{
+    background-image: url(../img/btn-next.png);   
+    right: -10px;
+    background-position: right 50%;
+	z-index: 100;
+}
+
+/* Dots */
+.slick-slider
+{
+    margin-bottom: 0;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: 30px;
+		right: 15px;
+    display: block;
+
+    width: 100%;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: right;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 50px;
+    height: 5px;
+    margin: 0 15px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 50px;
+    height: 5px;
+    padding: 0;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: #FFF;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    font-size: 0;
+    text-indent: -999em;
+}
+.slick-dots li.slick-active button{
+    background-color: #233b6c;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+.slick-dots
+{
+    bottom: 5px;
+		right: 5px;
+}
+.slick-dots li
+{
+    width: 25px;
+    height: 3px;
+    margin: 0 5px;
+}
+.slick-dots li button
+{
+    width: 25px;
+    height: 3px;
+}
+
+}
